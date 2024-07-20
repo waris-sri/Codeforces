@@ -42,6 +42,8 @@
 //     }
 // }
 
+// TODO: use another code implementation that's faster than this, maybe GCD?
+
 import java.util.Scanner;
 
 public class PermutationProblem {
