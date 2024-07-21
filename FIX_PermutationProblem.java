@@ -42,11 +42,11 @@
 //     }
 // }
 
-// TODO: use another code implementation that's faster than this, maybe GCD?
+// FIXME: use another code implementation that's faster than this, maybe GCD?
 
 import java.util.Scanner;
 
-public class PermutationProblem {
+public class FIX_PermutationProblem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
