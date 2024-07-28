@@ -46,17 +46,17 @@
 
 import java.util.Scanner;
 
-public class FIX_PermutationProblem {
+public class FIX_PermutationProblemHard {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        for (int i = 0; i < t; i++) {
-            int n = sc.nextInt();
-            int[] p = new int[n];
-            java.util.Arrays.setAll(p, index -> sc.nextInt());
-            System.out.println(count(n, p));
+        try (Scanner sc = new Scanner(System.in)) {
+            int t = sc.nextInt();
+            for (int i = 0; i < t; i++) {
+                int n = sc.nextInt();
+                int[] p = new int[n];
+                java.util.Arrays.setAll(p, index -> sc.nextInt());
+                System.out.println(count(n, p));
+            }
         }
-        sc.close();
     }
 
     static int count(int n, int[] p) {
