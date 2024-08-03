@@ -1,3 +1,5 @@
+// Lights Out
+
 import java.util.Scanner;
 
 public class LightsOut {
