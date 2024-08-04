@@ -1,3 +1,8 @@
+.gitignore
+.gitattributes
+*.ser
+.vscode
+
 # Compiled source #
 ###################
 *.com
