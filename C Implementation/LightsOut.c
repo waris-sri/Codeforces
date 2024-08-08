@@ -1,19 +1,25 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
   int presses[3][3];
   int lights[3][3];
-  for (int i = 0; i < 3; i++) {
-    for (int j = 0; j < 3; j++) {
+  for (int i = 0; i < 3; i++)
+  {
+    for (int j = 0; j < 3; j++)
+    {
       lights[i][j] = 1;
     }
   }
-  for (int i = 0; i < 3; i++) {
-    for (int j = 0; j < 3; j++) {
+  for (int i = 0; i < 3; i++)
+  {
+    for (int j = 0; j < 3; j++)
+    {
       int p;
       scanf("%d", &presses[i][j]);
       // skip even numbers
-      if (presses[i][j] % 2 != 0) {
+      if (presses[i][j] % 2 != 0)
+      {
         // "toggle" the lights just by subtracting 1
         // check whether a position is out of bounds, if not, toggle
         lights[i][j] = 1 - lights[i][j];
@@ -28,8 +34,10 @@ int main() {
       }
     }
   }
-  for (int i = 0; i < 3; i++) {
-    for (int j = 0; j < 3; j++) {
+  for (int i = 0; i < 3; i++)
+  {
+    for (int j = 0; j < 3; j++)
+    {
       printf("%i", lights[i][j]);
     }
     printf("\n");

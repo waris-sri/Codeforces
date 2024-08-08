@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
   int mat[5][5];
   int mov, row1, col1 = 0;
-  for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < 5; j++) {
+  for (int i = 0; i < 5; i++)
+  {
+    for (int j = 0; j < 5; j++)
+    {
       scanf("%d", &mat[i][j]);
-      if (mat[i][j] == 1) {
+      if (mat[i][j] == 1)
+      {
         row1 = i + 1;
         col1 = j + 1;
       }
