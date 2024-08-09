@@ -4,7 +4,7 @@
 int main() {
   char t[1000];
   char str = scanf("%[^\n]", t); // scan until \n character (regex)
-  const char delim[2] = " ";         // use " " as a delimiter, size 2 for '\n'
+  const char delim[2] = " ";     // use " " as a delimiter, size 2 for '\n'
   char *tok;                     // prepare for tokenizer
   tok = strtok(t, delim);
   while (tok != 0) {
