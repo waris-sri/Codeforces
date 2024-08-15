@@ -9,7 +9,7 @@ public class Stones {
       char[] stones = sc.nextLine().toCharArray();
       char curr = stones[0];
       int cnt = 0;
-      for (int i = 1; i < stones.length; i++) {
+      for (int i = 1; i < n; i++) {
         if (stones[i] != curr) {
           curr = stones[i];
         } else {
