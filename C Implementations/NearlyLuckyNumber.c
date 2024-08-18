@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
   long n;
   scanf("%ld", &n);
 
@@ -8,15 +9,20 @@ int main() {
   sprintf(arr, "%ld", n); // store output on char buffer
 
   int luckyCount = 0;
-  for (int i = 0; arr[i] != '\0'; i++) {
-    if (arr[i] == '4' || arr[i] == '7') {
+  for (int i = 0; arr[i] != '\0'; i++)
+  {
+    if (arr[i] == '4' || arr[i] == '7')
+    {
       luckyCount++;
     }
   }
 
-  if (luckyCount == 4 || luckyCount == 7) {
+  if (luckyCount == 4 || luckyCount == 7)
+  {
     printf("YES\n");
-  } else {
+  }
+  else
+  {
     printf("NO\n");
   }
 

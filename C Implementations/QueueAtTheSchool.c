@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
   int n, t;
   scanf("%i", &n);
   scanf("%i", &t);
@@ -9,15 +10,20 @@ int main() {
   int i = 0;
   char s[100];
   scanf("%99s", s);
-  while (x < t) {
-    if (i < n - 1) {
-      if (s[i] == 'B' && s[i + 1] == 'G') {
+  while (x < t)
+  {
+    if (i < n - 1)
+    {
+      if (s[i] == 'B' && s[i + 1] == 'G')
+      {
         s[i] = 'G';
         s[i + 1] = 'B';
         i++;
       }
       i++;
-    } else {
+    }
+    else
+    {
       i = 0;
       x++;
     }
