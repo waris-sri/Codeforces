@@ -1,39 +1,31 @@
-#include <stdbool.h>
 #include <stdio.h>
 
-bool isDistinct(int y)
-{
-  int digits[10] = {}; // digits occurrence tracker array
-  while (y > 0)        // `y` will decrease as it's getting divided by 10
-  {
-    int digit = y % 10;
-    if (digits[digit] == 1)
-    {
-      return false; // digit already seen
-    }
-    digits[digit] = 1; // mark as seen
-    y /= 10;
-  }
-  return true;
-}
+int main() {
+  int year;
+  scanf("%d", &year);
 
-int solve(int y)
-{
-  while (y >= 1000 && y <= 9000)
-  {
-    y++; // new year value must be larger
-    if (isDistinct(y))
-    {
+  while (year >= 1000 && year <= 9000) {
+    year++; // new year value must be larger
+
+    int digits[10] = {0}; // digits occurrence tracker array
+    int y = year;
+    int distinct = 1; // 1 for true, 0 for false
+
+    while (y > 0) {
+      int digit = y % 10;
+      if (digits[digit] == 1) {
+        distinct = 0; // digit already seen
+        break;
+      }
+      digits[digit] = 1; // mark the digit as seen
+      y /= 10;
+    }
+
+    if (distinct) {
       break;
     }
   }
-  return y;
-}
 
-int main()
-{
-  int year;
-  scanf("%d", &year);
-  printf("%d\n", solve(year));
+  printf("%d\n", year);
   return 0;
 }

@@ -1,29 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
-{
+int main() {
   int n, t;
   scanf("%i", &n);
   scanf("%i", &t);
-  int x = 0;
-  int i = 0;
-  char s[100];
-  scanf("%99s", s);
-  while (x < t)
-  {
-    if (i < n - 1)
-    {
-      if (s[i] == 'B' && s[i + 1] == 'G')
-      {
+  int x = 0, i = 0;
+  char s[n + 1]; // +1 for null terminator (\0)
+  scanf("%s", s);
+  while (x < t) {
+    if (i < n - 1) {
+      if (s[i] == 'B' && s[i + 1] == 'G') {
         s[i] = 'G';
         s[i + 1] = 'B';
         i++;
       }
       i++;
-    }
-    else
-    {
+    } else {
       i = 0;
       x++;
     }
